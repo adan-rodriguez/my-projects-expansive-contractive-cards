@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Muli", sans-serif;
+  font-family: "Mulish", sans-serif;
   background-image: linear-gradient(
     to bottom right,
     rgb(20, 20, 20),
@@ -37,21 +37,34 @@ body {
   transition: height 700ms ease-in;
   border: 1px solid white;
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .panel:hover {
   opacity: 1;
 }
 
-.panel h3 {
+.panel a {
+  color: white;
+  font-weight: 700;
   font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0);
+  border: 1px solid white;
   border-radius: 75px;
   padding: 10px;
-  align-self: flex-end;
-  margin: 2px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
   opacity: 0;
-  transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s, background-color 0.3s;
+}
+
+.panel a::after {
+  content: " 🔗";
+}
+
+.panel a:hover {
+  background-color: rgb(33, 22, 131);
 }
 
 .panel.active {
@@ -59,6 +72,6 @@ body {
   opacity: 1;
 }
 
-.panel.active h3 {
+.panel.active a {
   opacity: 1;
 }
